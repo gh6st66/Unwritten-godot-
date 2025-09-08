@@ -1,0 +1,19 @@
+[
+  {
+    "id": "beat.market.rumor-trade",
+    "trigger": {
+      "verbs": ["barter", "ask_about"],
+      "tags": ["market", "rumor"]
+    },
+    "weight": 40,
+    "cooldown": { "steps": 2 },
+    "context_tags": ["ivythorn", "trade"],
+    "compose": {
+      "requires": ["site:Caravan of Thorns"],
+      "grants": ["rumor:new", "item:Roadkeepers Token?5%"],
+      "costs": [{ "resource": "TIME", "amount": 1 }],
+      "effects": ["pressure:scarcity -2", "faction:Roadkeepers +1"],
+      "echoTemplateId": "echo.rumor_seeded"
+    }
+  }
+]

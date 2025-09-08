@@ -1,0 +1,16 @@
+[
+  {
+    "id": "beat.gate.toll-or-trade",
+    "trigger": { "verbs": ["barter", "travel"], "tags": ["gate", "road"] },
+    "weight": 30,
+    "cooldown": { "steps": 3 },
+    "context_tags": ["ivythorn", "journey"],
+    "compose": {
+      "requires": ["site:Briar Gate"],
+      "grants": ["rumor:new", "faction:Roadkeepers +1 if toll paid"],
+      "costs": [{ "resource": "TIME", "amount": 1 }],
+      "effects": ["recognition:-1 if toll evaded", "pressure:retaliation +2"],
+      "echoTemplateId": "echo.toll_paid"
+    }
+  }
+]

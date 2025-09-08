@@ -1,0 +1,16 @@
+[
+  {
+    "id": "beat.road.bind-and-pass",
+    "trigger": { "verbs": ["travel", "invoke"], "tags": ["road"] },
+    "weight": 35,
+    "cooldown": { "steps": 2 },
+    "context_tags": ["amber-dunes", "journey"],
+    "compose": {
+      "requires": ["site:Milestone XIII"],
+      "grants": ["buff:hazard_road -1 tier for next leg"],
+      "costs": [{ "resource": "TIME", "amount": 1 }],
+      "effects": ["pressure:rumor_heat +2"],
+      "echoTemplateId": "echo.road_bound"
+    }
+  }
+]

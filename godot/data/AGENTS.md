@@ -65,6 +65,37 @@ tags = ["ancient"]
 
 ---
 
+## Beat JSON
+
+### Fields
+
+- `id: String`
+- `trigger`
+  - `verbs: PackedStringArray`
+  - `tags: PackedStringArray`
+- `weight: int`
+- `cooldown`
+  - `steps: int`
+- `context_tags: PackedStringArray`
+- `compose`
+  - `requires: PackedStringArray`
+  - `grants: PackedStringArray`
+  - `costs: Array[Dictionary]` (keys `resource`, `amount`)
+  - `effects: PackedStringArray`
+  - `echoTemplateId: String`
+
+### Constraints
+
+- Each file is a JSON array of one or more beats.
+- Tokens are lowercase, hyphenated if multi-word.
+
+### Naming
+
+- File name: `<id>.json`.
+- Folder: `res://data/beats/`.
+
+---
+
 ## Editor steps (Godot 4.3)
 
 1. **Create**: Right-click target folder → **New Resource…** → pick `VerbDef` or `NounDef` → Save.

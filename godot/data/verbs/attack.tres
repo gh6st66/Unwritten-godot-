@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "attack"
+synonyms = ["strike", "hit", "slash", "stab", "swing", "punch", "kick", "bash", "bludgeon", "shoot", "fire", "hurl", "lob", "cast", "smite", "assail", "assault", "pounce", "ambush", "skewer", "cleave", "hew", "hack"]

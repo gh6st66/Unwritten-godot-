@@ -1,0 +1,16 @@
+[
+  {
+    "id": "beat.cistern.water-for-journey",
+    "trigger": { "verbs": ["invoke", "travel"], "tags": ["cistern", "water"] },
+    "weight": 30,
+    "cooldown": { "steps": 2 },
+    "context_tags": ["amber-dunes", "travel"],
+    "compose": {
+      "requires": ["site:Wanderers Cistern"],
+      "grants": ["buff:next_travel_success"],
+      "costs": [{ "resource": "CLARITY", "amount": 1 }],
+      "effects": ["faction:Roadkeepers +1"],
+      "echoTemplateId": "echo.journey_marked"
+    }
+  }
+]

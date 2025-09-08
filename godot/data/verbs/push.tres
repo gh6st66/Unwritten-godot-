@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "push"
+synonyms = ["shove", "press", "heave", "drive", "ram", "thrust", "force", "nudge", "edge", "budge", "muscle", "shoulder", "lever", "jam", "propel", "urge", "crowd"]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "beat.hall.mask-baptism",
+    "trigger": { "verbs": ["mask", "scribe"], "tags": ["craft", "identity"] },
+    "weight": 25,
+    "cooldown": { "steps": 3 },
+    "context_tags": ["basalt-ridge", "craft"],
+    "compose": {
+      "requires": ["site:Maskwright Hall", "relic:Blank Reed Mask"],
+      "grants": ["mask:BAPTIZED", "recognition:+2 Maskwrights"],
+      "costs": [{ "resource": "TIME", "amount": 2 }],
+      "effects": ["pressure:retaliation +2 (rival faction random)"],
+      "echoTemplateId": "echo.mask_forged"
+    }
+  }
+]

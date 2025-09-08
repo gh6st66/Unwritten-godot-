@@ -1,0 +1,16 @@
+[
+  {
+    "id": "beat.ruin.lens-of-the-old-sky",
+    "trigger": { "verbs": ["study", "scribe"], "tags": ["ruin", "memory"] },
+    "weight": 20,
+    "cooldown": { "steps": 4 },
+    "context_tags": ["salt-steppe", "star"],
+    "compose": {
+      "requires": ["site:Salt-Glass Observatory"],
+      "grants": ["clue:constellation", "relic:Salt Lens?10%"],
+      "costs": [{ "resource": "CLARITY", "amount": 1 }],
+      "effects": ["pressure:retaliation +3 (Salt Covenant)"],
+      "echoTemplateId": "echo.memory_recovered"
+    }
+  }
+]

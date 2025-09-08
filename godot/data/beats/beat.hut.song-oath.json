@@ -1,0 +1,16 @@
+[
+  {
+    "id": "beat.hut.song-oath",
+    "trigger": { "verbs": ["invoke", "pledge"], "tags": ["song", "oath"] },
+    "weight": 35,
+    "cooldown": { "steps": 2 },
+    "context_tags": ["ivythorn", "song"],
+    "compose": {
+      "requires": ["site:Thorn Cantors Hut"],
+      "grants": ["mark:SONG-BOUND"],
+      "costs": [{ "resource": "CLARITY", "amount": 1 }],
+      "effects": ["pressure:rumor_heat +2"],
+      "echoTemplateId": "echo.oath_chanted"
+    }
+  }
+]

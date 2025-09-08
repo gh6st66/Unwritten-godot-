@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "move"
+synonyms = ["go", "walk", "run", "sprint", "step", "proceed", "advance", "head", "travel", "venture", "stride", "tiptoe", "creep", "hurry", "rush", "dash", "wander", "roam", "trek", "march", "backtrack", "relocate", "drift"]

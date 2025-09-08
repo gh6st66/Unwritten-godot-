@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/noun_def.gd")
+canonical = "jagged-cairn"
+synonyms = ["cairn", "stones", "markings"]
