@@ -15,11 +15,17 @@ func _test_parser():
     while file != "":
         if file.ends_with(".tres"):
             var res: VerbDef = load("res://data/verbs/%s" % file)
-            assert(parser.get_verb(res.verb) == res.verb)
+            var syns: Array = []
+            syns.append(res.verb)
             for s in res.synonyms:
-                assert(parser.get_verb(s) == res.verb)
-                assert(parser.get_verb("no-%s" % s) == "")
-            assert(parser.get_verb("no-%s" % res.verb) == "")
+                syns.append(s)
+            for s in syns:
+                var phrase = s.replace("_", " ")
+                assert(parser.normalize_token(phrase) == s)
+                var intent = parser.parse("%s apple" % phrase)
+                assert(intent["verb"] == res.verb)
+                assert(intent["direct"] == "apple")
+                assert(parser.get_verb("no_%s" % s) == "")
         file = dir.get_next()
     dir.list_dir_end()
     dir = DirAccess.open("res://data/nouns")
@@ -28,11 +34,16 @@ func _test_parser():
     while file != "":
         if file.ends_with(".tres"):
             var res: NounDef = load("res://data/nouns/%s" % file)
-            assert(parser.get_noun(res.canonical) == res.canonical)
+            var syns: Array = []
+            syns.append(res.canonical)
             for s in res.synonyms:
-                assert(parser.get_noun(s) == res.canonical)
-                assert(parser.get_noun("no-%s" % s) == "")
-            assert(parser.get_noun("no-%s" % res.canonical) == "")
+                syns.append(s)
+            for s in syns:
+                var phrase = s.replace("_", " ")
+                assert(parser.normalize_token(phrase) == s)
+                var intent = parser.parse("inspect %s" % phrase)
+                assert(intent["direct"] == res.canonical)
+                assert(parser.get_noun("no_%s" % s) == "")
         file = dir.get_next()
     dir.list_dir_end()
 

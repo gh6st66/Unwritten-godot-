@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/verb_def.gd")
 verb = "enter"
-synonyms = ["cross", "breach", "slip"]
+synonyms = ["cross", "breach", "slip", "go_in", "step_in", "walk_in", "move_in", "pass_through", "head_inside", "push_in", "file_in", "duck_in", "pop_in", "slide_in", "creep_in", "barge_in", "step_through", "go_through"]

@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/verb_def.gd")
 verb = "drop"
-synonyms = ["discard", "dump", "jettison", "shed", "abandon", "release", "offload", "deposit", "place", "stow", "unhand", "relinquish", "ditch", "unload"]
+synonyms = ["discard", "dump", "jettison", "shed", "abandon", "release", "offload", "deposit", "place", "stow", "unhand", "relinquish", "ditch", "unload", "put_down", "set_down", "lay_down", "let_go"]

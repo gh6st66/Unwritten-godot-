@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/noun_def.gd")
 canonical = "old-chest"
-synonyms = ["chest", "box"]
+synonyms = ["chest", "box", "old_box", "wooden_chest"]

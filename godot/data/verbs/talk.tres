@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/verb_def.gd")
 verb = "talk"
-synonyms = ["speak", "converse", "address", "hail", "greet", "chat", "parley", "negotiate", "bargain", "confer", "whisper", "call", "gossip"]
+synonyms = ["speak", "converse", "address", "hail", "greet", "chat", "parley", "negotiate", "bargain", "confer", "whisper", "call", "gossip", "talk_to", "speak_to", "whisper_to", "call_to", "summon"]
