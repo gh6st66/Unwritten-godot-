@@ -1,0 +1,5 @@
+[resource]
+script = ExtResource("res://resources/noun_def.gd")
+canonical = "map"
+synonyms = ["chart"]
+tags = ["paper"]

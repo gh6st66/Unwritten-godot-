@@ -1,0 +1,16 @@
+{
+  "id": "beat.ruin.lens-of-the-old-sky",
+  "tags": ["ruin", "lens"],
+  "trigger": { "type": "time", "at_time": 8 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "seer",
+      "action": "reveal",
+      "outcome": "sky",
+      "tags": ["vision"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 5
+}

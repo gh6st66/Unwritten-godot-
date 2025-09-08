@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "travel"
+synonyms = ["journey", "roam", "trek", "venture"]

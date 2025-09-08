@@ -1,0 +1,16 @@
+{
+  "id": "beat.shrine.oath-or-price",
+  "tags": ["shrine", "oath"],
+  "trigger": { "type": "time", "at_time": 9 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "priest",
+      "action": "demand",
+      "outcome": "price",
+      "tags": ["sacrifice"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 6
+}

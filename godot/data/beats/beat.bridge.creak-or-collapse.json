@@ -1,0 +1,16 @@
+{
+  "id": "beat.bridge.creak-or-collapse",
+  "tags": ["bridge", "creak"],
+  "trigger": { "type": "time", "at_time": 3 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "bridge",
+      "tags": ["creak"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 5
+}

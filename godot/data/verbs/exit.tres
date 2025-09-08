@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "exit"
+synonyms = ["leave", "depart", "withdraw", "quit", "clear", "go_out", "step_out", "walk_out", "move_out", "back_out", "slip_out", "head_out", "get_out", "clear_out", "file_out", "bail", "make_off"]

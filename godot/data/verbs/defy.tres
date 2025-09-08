@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "defy"
+synonyms = ["resist", "oppose", "withstand", "spurn", "flout", "challenge", "renounce"]

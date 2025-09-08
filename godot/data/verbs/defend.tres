@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "defend"
+synonyms = ["guard", "block", "parry", "dodge", "evade", "sidestep", "brace", "shield", "cover", "counter", "riposte", "ward", "protect", "intercept", "hunker", "absorb", "withstand"]

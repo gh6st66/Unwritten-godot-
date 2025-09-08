@@ -1,0 +1,16 @@
+{
+  "id": "beat.kiln.fire-or-ruin",
+  "tags": ["kiln", "fire"],
+  "trigger": { "type": "time", "at_time": 2 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "smith",
+      "action": "stoke",
+      "outcome": "flame",
+      "tags": ["forge"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 3
+}

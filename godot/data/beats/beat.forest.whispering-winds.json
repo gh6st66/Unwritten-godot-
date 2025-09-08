@@ -1,0 +1,16 @@
+{
+  "id": "beat.forest.whispering-winds",
+  "tags": ["forest", "wind"],
+  "trigger": { "type": "time", "at_time": 5 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "forest",
+      "tags": ["wind"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 7
+}

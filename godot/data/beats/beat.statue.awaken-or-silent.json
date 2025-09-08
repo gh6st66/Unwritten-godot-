@@ -1,0 +1,16 @@
+{
+  "id": "beat.statue.awaken-or-silent",
+  "tags": ["statue", "stone"],
+  "trigger": { "type": "time", "at_time": 8 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "statue",
+      "tags": ["stone"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 8
+}

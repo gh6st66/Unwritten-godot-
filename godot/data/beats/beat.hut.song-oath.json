@@ -1,0 +1,16 @@
+{
+  "id": "beat.hut.song-oath",
+  "tags": ["hut", "song"],
+  "trigger": { "type": "time", "at_time": 5 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "elder",
+      "action": "sing",
+      "outcome": "oath",
+      "tags": ["chant"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 2
+}

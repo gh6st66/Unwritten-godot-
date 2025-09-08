@@ -1,0 +1,7 @@
+{
+  "pick up": "pick_up",
+  "look at": "look_at",
+  "talk to": "talk_to",
+  "go in": "go_in",
+  "go out": "go_out"
+}

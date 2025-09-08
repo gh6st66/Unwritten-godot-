@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "reveal"
+synonyms = ["disclose", "unveil", "uncover", "divulge"]

@@ -1,0 +1,16 @@
+{
+  "id": "beat.market.rumor-trade",
+  "tags": ["market", "rumor"],
+  "trigger": { "type": "time", "at_time": 6 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "merchant",
+      "action": "whisper",
+      "outcome": "rumor",
+      "tags": ["trade"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 3
+}

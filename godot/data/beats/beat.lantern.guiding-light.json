@@ -1,0 +1,16 @@
+{
+  "id": "beat.lantern.guiding-light",
+  "tags": ["lantern", "light"],
+  "trigger": { "type": "time", "at_time": 11 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "lantern",
+      "tags": ["light"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 6
+}

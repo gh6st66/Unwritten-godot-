@@ -1,0 +1,16 @@
+{
+  "id": "beat.potion.heal-or-harm",
+  "tags": ["potion", "brew"],
+  "trigger": { "type": "time", "at_time": 12 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "potion",
+      "tags": ["brew"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 7
+}
