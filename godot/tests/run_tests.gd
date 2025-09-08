@@ -42,9 +42,9 @@ func _test_scheduler():
     var kiln_times: Array = []
     var shrine_times: Array = []
     scheduler.beat_triggered.connect(func(beat):
-        if beat.id == "beat.kiln.fire-or-ruin":
+        if beat["id"] == "beat.kiln.fire-or-ruin":
             kiln_times.append(scheduler.get_time())
-        if beat.id == "beat.shrine.oath-or-price":
+        if beat["id"] == "beat.shrine.oath-or-price":
             shrine_times.append(scheduler.get_time())
     )
     for i in range(20):

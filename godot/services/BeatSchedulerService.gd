@@ -20,7 +20,7 @@ func load_beats(path: String = "res://data/beats") -> void:
                 var beat := JSON.parse_string(text)
                 if beat is Dictionary:
                     _beats.append(beat)
-                    _cooldowns[beat.id] = 0
+                    _cooldowns[beat["id"]] = 0
             f = dir.get_next()
         dir.list_dir_end()
 
@@ -33,13 +33,13 @@ func step() -> void:
             _trigger(beat)
 
 func _can_fire(beat: Dictionary) -> bool:
-    return _time >= _cooldowns.get(beat.id, 0)
+    return _time >= _cooldowns.get(beat["id"], 0)
 
 func _check_trigger(beat: Dictionary) -> bool:
-    var t := beat.trigger
-    match t.type:
+    var t: Dictionary = beat["trigger"]
+    match t["type"]:
         "time":
-            return _time % int(t.at_time) == 0
+            return _time % int(t["at_time"]) == 0
         _:
             return false
 
@@ -47,7 +47,7 @@ func _trigger(beat: Dictionary) -> void:
     emit_signal("beat_triggered", beat)
     var cd: int = beat.get("cooldown", 0)
     if cd > 0:
-        _cooldowns[beat.id] = _time + cd
+        _cooldowns[beat["id"]] = _time + cd
 
 func get_time() -> int:
     return _time
