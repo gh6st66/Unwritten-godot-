@@ -70,23 +70,23 @@ tags = ["ancient"]
 ### Fields
 
 - `id: String`
-- `trigger`
-  - `verbs: PackedStringArray`
-  - `tags: PackedStringArray`
-- `weight: int`
-- `cooldown`
-  - `steps: int`
-- `context_tags: PackedStringArray`
-- `compose`
-  - `requires: PackedStringArray`
-  - `grants: PackedStringArray`
-  - `costs: Array[Dictionary]` (keys `resource`, `amount`)
-  - `effects: PackedStringArray`
-  - `echoTemplateId: String`
+- `tags: PackedStringArray`
+- `trigger: Dictionary`
+  - `type: String` (`time`, `echo`, `mask`, `manual`)
+  - `at_time: int` (if `type = time`)
+  - `echo_tags: PackedStringArray` (if `type = echo`)
+  - `mask_id: String` (if `type = mask`)
+- `effect: Dictionary`
+  - `type: String` (`echo`, `mark`, `event`)
+  - `echo: Dictionary` (`actor`, `action`, `outcome`, `tags`)
+  - `mark: String` (if `type = mark`)
+  - `event_id: String` (if `type = event`)
+- `weight: float`
+- `cooldown: int`
 
 ### Constraints
 
-- Each file is a JSON array of one or more beats.
+- Each file stores a single beat object.
 - Tokens are lowercase, hyphenated if multi-word.
 
 ### Naming

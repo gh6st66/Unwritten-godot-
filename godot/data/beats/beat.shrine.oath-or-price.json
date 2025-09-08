@@ -1,19 +1,16 @@
-[
-  {
-    "id": "beat.shrine.oath-or-price",
-    "trigger": { "verbs": ["invoke", "pledge"], "tags": ["shrine", "oath"] },
-    "weight": 30,
-    "cooldown": { "steps": 3 },
-    "context_tags": ["ash-fen", "spirit"],
-    "compose": {
-      "requires": ["site:Whisper-Knot Shrine"],
-      "grants": ["mark:SPIRIT-BOUND|1"],
-      "costs": [{ "resource": "CLARITY", "amount": 2 }],
-      "effects": [
-        "faction:Lantern Court +1 if oath honored later",
-        "pressure:rumor_heat +5"
-      ],
-      "echoTemplateId": "echo.oath_sworn"
+{
+  "id": "beat.shrine.oath-or-price",
+  "tags": ["shrine", "oath"],
+  "trigger": { "type": "time", "at_time": 9 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "priest",
+      "action": "demand",
+      "outcome": "price",
+      "tags": ["sacrifice"]
     }
-  }
-]
+  },
+  "weight": 1.0,
+  "cooldown": 6
+}

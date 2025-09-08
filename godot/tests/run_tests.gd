@@ -35,13 +35,13 @@ func _test_parser():
     dir.list_dir_end()
 
 func _test_scheduler():
-    var scheduler = BeatScheduler.new()
+    var scheduler = BeatSchedulerService.new()
     scheduler.load_beats()
-    var beat = scheduler.select("invoke")
-    assert(beat != null)
-    var again = scheduler.select("invoke")
-    assert(again == null)
-    for i in range(beat.cooldown.steps):
+    var times: Array = []
+    scheduler.beat_triggered.connect(func(beat):
+        if beat.id == "beat.kiln.fire-or-ruin":
+            times.append(scheduler.get_time())
+    )
+    for i in range(6):
         scheduler.step()
-    var third = scheduler.select("invoke")
-    assert(third != null)
+    assert(times == [2, 6])

@@ -1,16 +1,16 @@
-[
-  {
-    "id": "beat.well.truth-or-depth",
-    "trigger": { "verbs": ["invoke", "study"], "tags": ["spirit", "water"] },
-    "weight": 20,
-    "cooldown": { "steps": 4 },
-    "context_tags": ["drowned-vale", "omen"],
-    "compose": {
-      "requires": ["site:Whispering Well"],
-      "grants": ["hazard:reveal next", "mark:SPIRIT-TOUCHED?15%"],
-      "costs": [{ "resource": "CLARITY", "amount": 2 }],
-      "effects": ["faction:Mirebound +1/-1 depending on truth"],
-      "echoTemplateId": "echo.truth_offered"
+{
+  "id": "beat.well.truth-or-depth",
+  "tags": ["well", "truth"],
+  "trigger": { "type": "time", "at_time": 10 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "well",
+      "action": "murmur",
+      "outcome": "truth",
+      "tags": ["depth"]
     }
-  }
-]
+  },
+  "weight": 1.0,
+  "cooldown": 7
+}

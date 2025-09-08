@@ -1,16 +1,16 @@
-[
-  {
-    "id": "beat.kiln.fire-or-ruin",
-    "trigger": { "verbs": ["study", "remember"], "tags": ["kiln", "craft"] },
-    "weight": 25,
-    "cooldown": { "steps": 3 },
-    "context_tags": ["ash-fen", "fire"],
-    "compose": {
-      "requires": ["site:Peatfire Kiln"],
-      "grants": ["artifact:new", "rumor:craft_secret"],
-      "costs": [{ "resource": "TIME", "amount": 1 }],
-      "effects": ["pressure:scarcity -2"],
-      "echoTemplateId": "echo.artifact_fired"
+{
+  "id": "beat.kiln.fire-or-ruin",
+  "tags": ["kiln", "fire"],
+  "trigger": { "type": "time", "at_time": 2 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "smith",
+      "action": "stoke",
+      "outcome": "flame",
+      "tags": ["forge"]
     }
-  }
-]
+  },
+  "weight": 1.0,
+  "cooldown": 3
+}
