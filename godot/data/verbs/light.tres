@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "light"
+synonyms = ["ignite", "kindle", "spark", "torch", "burn", "illuminate", "brighten", "rekindle", "inflame"]

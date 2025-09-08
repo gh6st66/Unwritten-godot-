@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "inspect"
+synonyms = ["look", "examine", "peek", "peer", "scrutinize", "survey", "scan", "observe", "regard", "eyeball", "peruse", "appraise", "assess", "glance", "note", "probe", "scope", "look_at"]

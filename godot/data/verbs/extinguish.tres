@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "extinguish"
+synonyms = ["douse", "snuff", "quench", "smother", "stamp", "kill", "choke", "damp", "stifle", "suffocate", "cut", "blow", "squash", "quell", "suppress"]

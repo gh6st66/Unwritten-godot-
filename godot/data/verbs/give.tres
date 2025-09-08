@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "give"
+synonyms = ["hand", "pass", "offer", "present", "grant", "donate", "bestow", "deliver", "yield", "trade", "barter", "exchange", "gift", "contribute", "remit", "supply", "provide"]

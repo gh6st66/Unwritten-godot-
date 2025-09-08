@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/noun_def.gd")
+canonical = "ash"
+synonyms = ["grey-ash", "fine-ash"]

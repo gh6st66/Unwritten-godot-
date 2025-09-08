@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "craft"
+synonyms = ["forge", "build", "create", "fashion", "form", "shape", "assemble", "fabricate", "concoct", "brew", "carve", "chisel", "hammer", "temper", "smith", "weave", "stitch", "sew", "inscribe"]
