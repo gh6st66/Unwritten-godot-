@@ -1,0 +1,16 @@
+{
+  "id": "beat.river.splash-or-sleep",
+  "tags": ["river", "splash"],
+  "trigger": { "type": "time", "at_time": 7 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "river",
+      "tags": ["splash"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 5
+}

@@ -1,0 +1,16 @@
+{
+  "id": "beat.mountain.rockfall",
+  "tags": ["mountain", "rock"],
+  "trigger": { "type": "time", "at_time": 6 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "mountain",
+      "tags": ["rock"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 4
+}

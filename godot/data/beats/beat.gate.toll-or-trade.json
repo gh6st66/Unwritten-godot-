@@ -1,0 +1,16 @@
+{
+  "id": "beat.gate.toll-or-trade",
+  "tags": ["gate", "toll"],
+  "trigger": { "type": "time", "at_time": 3 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "guard",
+      "action": "demand",
+      "outcome": "toll",
+      "tags": ["trade"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 4
+}

@@ -1,0 +1,16 @@
+{
+  "id": "beat.well.truth-or-depth",
+  "tags": ["well", "truth"],
+  "trigger": { "type": "time", "at_time": 10 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "well",
+      "action": "murmur",
+      "outcome": "truth",
+      "tags": ["depth"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 7
+}

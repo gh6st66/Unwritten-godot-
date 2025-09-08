@@ -1,0 +1,16 @@
+{
+  "id": "beat.door.creak-open",
+  "tags": ["door", "creak"],
+  "trigger": { "type": "time", "at_time": 9 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "door",
+      "tags": ["creak"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 3
+}

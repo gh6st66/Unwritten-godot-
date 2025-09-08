@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/noun_def.gd")
+canonical = "chronicle"
+synonyms = ["echoes", "history", "record"]

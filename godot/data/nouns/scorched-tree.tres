@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/noun_def.gd")
+canonical = "scorched-tree"
+synonyms = ["tree", "lightning-tree"]

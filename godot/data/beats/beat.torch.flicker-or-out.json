@@ -1,0 +1,16 @@
+{
+  "id": "beat.torch.flicker-or-out",
+  "tags": ["torch", "flame"],
+  "trigger": { "type": "time", "at_time": 10 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "torch",
+      "tags": ["flame"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 5
+}

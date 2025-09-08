@@ -1,0 +1,16 @@
+{
+  "id": "beat.hall.mask-baptism",
+  "tags": ["hall", "ritual"],
+  "trigger": { "type": "time", "at_time": 4 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "maskmaker",
+      "action": "baptize",
+      "outcome": "mask",
+      "tags": ["ceremony"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 5
+}

@@ -1,0 +1,16 @@
+{
+  "id": "beat.road.bind-and-pass",
+  "tags": ["road", "passage"],
+  "trigger": { "type": "time", "at_time": 7 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "traveler",
+      "action": "bind",
+      "outcome": "passage",
+      "tags": ["road"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 4
+}

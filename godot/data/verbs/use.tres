@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "use"
+synonyms = ["apply", "employ", "wield", "operate", "handle", "activate", "trigger", "engage", "deploy", "leverage", "work", "run", "tap", "utilize", "press"]

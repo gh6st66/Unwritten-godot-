@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "take"
+synonyms = ["grab", "seize", "snatch", "lift", "collect", "gather", "pocket", "appropriate", "acquire", "fetch", "bag", "nab", "hoist", "reclaim", "get", "secure", "salvage", "pry", "remove", "retrieve", "yank", "pluck", "pick_up", "scoop_up"]

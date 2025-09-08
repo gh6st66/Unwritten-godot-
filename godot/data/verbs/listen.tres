@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "listen"
+synonyms = ["hear", "eavesdrop", "heed", "hark", "tune-in"]

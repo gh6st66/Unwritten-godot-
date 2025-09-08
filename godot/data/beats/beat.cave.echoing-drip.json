@@ -1,0 +1,16 @@
+{
+  "id": "beat.cave.echoing-drip",
+  "tags": ["cave", "drip"],
+  "trigger": { "type": "time", "at_time": 4 },
+  "effect": {
+    "type": "echo",
+    "echo": {
+      "actor": "narrator",
+      "action": "say",
+      "outcome": "cave",
+      "tags": ["drip"]
+    }
+  },
+  "weight": 1.0,
+  "cooldown": 6
+}

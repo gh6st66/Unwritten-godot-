@@ -1,0 +1,74 @@
+extends SceneTree
+
+func _init():
+    _test_parser()
+    _test_scheduler()
+    print("OK")
+    quit()
+
+func _test_parser():
+    var parser = ParserService.new()
+    parser.refresh()
+    var dir = DirAccess.open("res://data/verbs")
+    dir.list_dir_begin()
+    var file = dir.get_next()
+    var verb_count = 0
+    while file != "":
+        if file.ends_with(".tres"):
+            verb_count += 1
+            var res: VerbDef = load("res://data/verbs/%s" % file)
+            var syns: Array = []
+            syns.append(res.verb)
+            for s in res.synonyms:
+                syns.append(s)
+            for s in syns:
+                var phrase = s.replace("_", " ")
+                assert(parser.normalize_token(phrase) == s)
+                var intent = parser.parse("%s apple" % phrase)
+                assert(intent["verb"] == res.verb)
+                assert(intent["direct"] == "apple")
+                assert(parser.get_verb("no_%s" % s) == "")
+        file = dir.get_next()
+    dir.list_dir_end()
+    assert(verb_count >= 60)
+    dir = DirAccess.open("res://data/nouns")
+    dir.list_dir_begin()
+    file = dir.get_next()
+    var noun_count = 0
+    while file != "":
+        if file.ends_with(".tres"):
+            noun_count += 1
+            var res: NounDef = load("res://data/nouns/%s" % file)
+            var syns: Array = []
+            syns.append(res.canonical)
+            for s in res.synonyms:
+                syns.append(s)
+            for s in syns:
+                var phrase = s.replace("_", " ")
+                assert(parser.normalize_token(phrase) == s)
+                var intent = parser.parse("inspect %s" % phrase)
+                assert(intent["direct"] == res.canonical)
+                assert(parser.get_noun("no_%s" % s) == "")
+        file = dir.get_next()
+    dir.list_dir_end()
+    assert(noun_count >= 60)
+
+func _test_scheduler():
+    var scheduler = BeatSchedulerService.new()
+    scheduler.load_beats()
+    var kiln_times: Array = []
+    var shrine_times: Array = []
+    var bridge_times: Array = []
+    scheduler.beat_triggered.connect(func(beat):
+        if beat["id"] == "beat.kiln.fire-or-ruin":
+            kiln_times.append(scheduler.get_time())
+        if beat["id"] == "beat.shrine.oath-or-price":
+            shrine_times.append(scheduler.get_time())
+        if beat["id"] == "beat.bridge.creak-or-collapse":
+            bridge_times.append(scheduler.get_time())
+    )
+    for i in range(20):
+        scheduler.step()
+    assert(kiln_times == [2, 6, 10, 14])
+    assert(shrine_times == [9, 18])
+    assert(bridge_times == [3, 9, 15])
