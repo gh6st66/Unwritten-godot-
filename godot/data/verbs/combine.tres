@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/verb_def.gd")
 verb = "combine"
-synonyms = ["merge", "fuse", "join", "mix", "blend", "alloy", "meld", "unite", "assemble", "couple", "pair", "marry", "splice", "graft", "conjoin", "add", "synthesize", "brew"]
+synonyms = ["merge", "fuse", "mix", "blend", "alloy", "meld", "unite", "assemble", "couple", "pair", "marry", "splice", "graft", "conjoin", "add", "synthesize", "brew"]

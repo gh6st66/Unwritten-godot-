@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/verb_def.gd")
 verb = "ask"
-synonyms = ["inquire", "question", "query", "interrogate", "probe", "press", "demand", "request", "petition", "beg", "seek", "solicit", "pose", "quiz", "challenge", "verify"]
+synonyms = ["inquire", "question", "query", "interrogate", "probe", "press", "demand", "request", "petition", "beg", "seek", "solicit", "pose", "quiz", "verify"]

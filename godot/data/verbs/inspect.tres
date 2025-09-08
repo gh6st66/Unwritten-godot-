@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/verb_def.gd")
 verb = "inspect"
-synonyms = ["look", "examine", "study", "check", "peek", "peer", "scrutinize", "survey", "scan", "observe", "regard", "eyeball", "peruse", "appraise", "assess", "glance", "note", "review", "probe", "scope"]
+synonyms = ["look", "examine", "peek", "peer", "scrutinize", "survey", "scan", "observe", "regard", "eyeball", "peruse", "appraise", "assess", "glance", "note", "probe", "scope"]

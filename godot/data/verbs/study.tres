@@ -1,0 +1,4 @@
+[resource]
+script = ExtResource("res://resources/verb_def.gd")
+verb = "study"
+synonyms = ["analyze", "research", "ponder"]

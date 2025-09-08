@@ -1,4 +1,4 @@
 [resource]
 script = ExtResource("res://resources/verb_def.gd")
 verb = "open"
-synonyms = ["unlock", "unbar", "unbolt", "unlatch", "pry", "crack", "lever", "lift", "raise", "draw", "part", "spread", "swing", "slide", "unseal", "reveal"]
+synonyms = ["pry", "crack", "lever", "lift", "raise", "draw", "part", "spread", "swing", "slide"]
